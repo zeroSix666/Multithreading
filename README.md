@@ -40,8 +40,8 @@ local function main()
         Citizen.Wait(0)
     end
 end
-
 Citizen.CreateThread(main)
+
 
 This code creates a set of worker tasks and runs them in parallel, with each task running in its own coroutine. The main function schedules the tasks, resuming them when necessary, and terminates when all tasks have completed.
 
