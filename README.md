@@ -10,7 +10,7 @@ Increased responsiveness: Multithreading helps keep your server responsive, even
 ##Implementing Multithreading in FiveM
 There are several ways to implement multithreading in FiveM, but the most common is to use parallel loops. Here's an example of how to do this in Lua:
 
-
+```lua
 local function worker(id, input)
     -- Your code here
     -- This is the task that will be run concurrently
@@ -40,7 +40,9 @@ local function main()
         Citizen.Wait(0)
     end
 end
+
 Citizen.CreateThread(main)
+'''
 
 
 This code creates a set of worker tasks and runs them in parallel, with each task running in its own coroutine. The main function schedules the tasks, resuming them when necessary, and terminates when all tasks have completed.
